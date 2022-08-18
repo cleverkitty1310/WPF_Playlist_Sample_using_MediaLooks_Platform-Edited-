@@ -1,0 +1,46 @@
+﻿<UserControl x:Class="CGEditor.CustomPropertyEditors.ShapeEditor"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+             xmlns:Fluent="clr-namespace:Fluent;assembly=Fluent" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/CGEditor;component/Resources/VectorIcons.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid HorizontalAlignment="Stretch" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="0" Margin="0,4,0,0">
+            <Label Content="{StaticResource Hex}" Height="22" Padding="1" VerticalAlignment="Center" Margin="2" ToolTip="Shape type"/>
+            <Fluent:ComboBox x:Name="ComboShapeType"  AllowDrop="False"  Margin="-8,2,2,2" VerticalAlignment="Center" MaxWidth="90" Width="90" IsEditable="False" SelectionChanged="ComboShapeType_SelectionChanged"/>
+
+            <Label Content="{StaticResource CornerRadius}" Height="22" Width="25" Padding="1,4,1,1" VerticalAlignment="Center" Margin="6,2,2,2" ToolTip="Gradient type"/>
+            <Fluent:Spinner x:Name="SpinnerRoundCorners" HorizontalAlignment="Center" Margin="-11,2,2,2" Maximum="100" Format="" Width="93" MaxWidth="93" ValueChanged="SpinnerRoundCorners_ValueChanged" />
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="1" Margin="0,4,0,0">
+            <Label Content="{StaticResource NSides}" Height="22" Padding="1,3,1,1" VerticalAlignment="Center" Margin="2" ToolTip="Number of sides" Width="25"/>
+            <Fluent:Spinner x:Name="SpinnerNSides" HorizontalAlignment="Center" Margin="-11,2,2,2" Maximum="20" Format="" Width="93" MaxWidth="93" IsEnabled="False" ValueChanged="SpinnerNSides_ValueChanged" />
+
+            <Label Content="{StaticResource Angle}" Height="22" Padding="1,3,1,1" VerticalAlignment="Center" Margin="6,2,2,2" ToolTip="Number of sides" Width="25"/>
+            <Fluent:Spinner x:Name="SpinnerRotate" HorizontalAlignment="Center" Margin="-11,2,2,2" Maximum="360" Format="" Width="93" MaxWidth="93" ValueChanged="SpinnerRotate_ValueChanged" />
+        </StackPanel>
+
+    </Grid>
+
+</UserControl>

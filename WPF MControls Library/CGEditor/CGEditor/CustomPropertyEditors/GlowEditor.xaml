@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="CGEditor.CustomPropertyEditors.GlowEditor"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+             xmlns:Fluent="clr-namespace:Fluent;assembly=Fluent" 
+             mc:Ignorable="d" 
+             d:DesignHeight="200" d:DesignWidth="400">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/CGEditor;component/Resources/VectorIcons.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid HorizontalAlignment="Stretch" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="0" Margin="0,4,0,0">
+            <ToggleButton x:Name="ToggleGlow" Content="{StaticResource Glow}"  Width="78"  Margin="2,2,2,2" Padding="4,6,4,4"  Focusable="False" ToolTip="Enadle glow effect" MinHeight="22" Height="22" Checked="ToggleGlow_Checked" Unchecked="ToggleGlow_Unchecked"/>
+            <Label Content="{StaticResource Width}" Height="22" Width="22" Padding="1,8,1,1" VerticalAlignment="Center" Margin="5,2,2,2" ToolTip="Glow X size"/>
+            <Fluent:Spinner x:Name="SpinnerGlowSizeX" HorizontalAlignment="Center" Margin="-11,2,2,2" Maximum="100" Width="65" MaxWidth="65" Format="" ValueChanged="SpinnerGlowSizeX_ValueChanged"  />
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="1" Margin="0,4,0,0">
+            <Label Content="{StaticResource FourArrows}"   Height="22" Width="22" Margin="2" Padding="1" VerticalAlignment="Center"  ToolTip="Glow value" BorderThickness="0" />
+            <Fluent:Spinner x:Name="SpinnerGlowVlue" HorizontalAlignment="Center" Margin="-11,2,2,2" Maximum="100" Width="65" MaxWidth="65" Format="" ValueChanged="SpinnerGlowVlue_ValueChanged"/>
+
+            <Label Content="{StaticResource Height}" Height="22" Width="22" Padding="1,8,1,1" VerticalAlignment="Center" Margin="5,2,2,2" ToolTip="Glow Y size" />
+            <Fluent:Spinner x:Name="SpinnerGlowSizeY" HorizontalAlignment="Center" Margin="-11,2,2,2" Maximum="100" Width="65" MaxWidth="65" Format="" ValueChanged="SpinnerGlowSizeY_ValueChanged" />
+        </StackPanel>
+
+    </Grid>
+
+</UserControl>

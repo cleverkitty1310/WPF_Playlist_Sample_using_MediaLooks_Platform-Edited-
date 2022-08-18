@@ -1,0 +1,53 @@
+﻿<UserControl x:Class="CGEditor.CustomPropertyEditors.FontEditor"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+             xmlns:Fluent="clr-namespace:Fluent;assembly=Fluent" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="400">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/CGEditor;component/Resources/VectorIcons.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="0,4,0,0" >
+            <Label Content="{StaticResource Font}" Height="22" Padding="1" Margin="2" ToolTip="Font" VerticalAlignment="Center"/>
+            <Fluent:ComboBox x:Name="ComboFontFamily" AllowDrop="False" Margin="-8,2,2,2" IsEditable="False" ToolTip="Font Family" Height="22" VerticalAlignment="Center"  MinWidth="142" MaxWidth="142" SelectionChanged="ComboFontFamily_SelectionChanged"/>
+            <Fluent:Spinner x:Name="SpinnerFontSize" VerticalAlignment="Center" Margin="-10,2,2,2" Maximum="999" Format="" Width="65" MaxWidth="65" ValueChanged="SpinnerFontSize_ValueChanged" />
+            <Fluent:ComboBox x:Name="ComboFontTypeface" AllowDrop="False" IsEditable="False" Margin="-8,2,2,2" ToolTip="Font Family" Height="22" VerticalAlignment="Center"  MinWidth="120"  MaxWidth="120" SelectionChanged="ComboFontTypeface_SelectionChanged"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal"  Grid.Row="1" Margin="0,4,0,0">
+            <!--<Label Content="{StaticResource Bold}" Height="22" Padding="1" Margin="2" ToolTip="Font" VerticalAlignment="Center"/>-->
+
+            <ToggleButton x:Name="ToggleUnderline" Content="{StaticResource Underline}"  Width="25" Height="22" Margin="2" Padding="5" BorderThickness="1" Focusable="False" ToolTip="Underline" Checked="ToggleUnderline_Checked" Unchecked="ToggleUnderline_Unchecked"/>
+            <ToggleButton x:Name="ToggleStrikeout" Content="{StaticResource Strikeout}"  Width="25" Height="22" Margin="2" Padding="5" BorderThickness="1" Focusable="False" ToolTip="Strikeout" Unchecked="ToggleStrikeout_Unchecked" Checked="ToggleStrikeout_Checked"/>
+            <ToggleButton x:Name="ToggleWordWrap"  Content="{StaticResource WordWrap}"   Width="25" Height="22" Margin="2" Padding="5" BorderThickness="1" Focusable="False" ToolTip="Word wrap" Checked="ToggleWordWrap_Checked" Unchecked="ToggleWordWrap_Unchecked"/>
+            <ToggleButton x:Name="ToggleVertical"  Content="{StaticResource VerticalText}"  Width="25" Height="22" Margin="2" Padding="5" BorderThickness="1" Focusable="False" ToolTip="Vertical text" Checked="ToggleVertical_Checked" Unchecked="ToggleVertical_Unchecked"/>
+            <ToggleButton x:Name="ToggleRightToLeft"  Content="{StaticResource RightToLeftText}"  Width="25" Height="22" Margin="2" Padding="5" BorderThickness="1" Focusable="False" ToolTip="Right-to-left" Checked="ToggleRightToLeft_Checked" Unchecked="ToggleRightToLeft_Unchecked"/>
+            <ToggleButton x:Name="ToggleNoTabs"  Content="{StaticResource NoTabs}"  Width="25" Height="22" Margin="2" Padding="5" BorderThickness="1" Focusable="False" ToolTip="No Tabs" Checked="ToggleNoTabs_Checked" Unchecked="ToggleNoTabs_Unchecked"/>
+
+            <Label Content="{StaticResource FlipText}" Height="22" Padding="2" Margin="8,2,2,2" ToolTip=" Text flip" VerticalAlignment="Center" />
+            <Fluent:ComboBox x:Name="ComboFlip" AllowDrop="False" IsEditable="False" Margin="-8,2,2,2" Height="22" VerticalAlignment="Center"  MinWidth="55" SelectionChanged="ComboFlip_SelectionChanged"/>
+
+            <Label Content="{StaticResource Type}" Height="20" Padding="2" Margin="6,2,2,2" ToolTip=" Type" VerticalAlignment="Center" />
+            <Fluent:ComboBox x:Name="ComboType" AllowDrop="False" IsEditable="False" Margin="-8,2,2,2" Height="22" VerticalAlignment="Center"  MinWidth="63" SelectionChanged="ComboType_SelectionChanged"/>
+        </StackPanel>
+
+    </Grid>
+</UserControl>

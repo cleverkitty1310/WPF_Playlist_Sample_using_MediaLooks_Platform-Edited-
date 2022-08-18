@@ -1,0 +1,20 @@
+﻿CGEditor
+
+
+winexe
+C#
+.cs
+F:\Prabhath\WPF\WPF MControls Library\CGEditor\CGEditor\obj\x64\Release\
+CGEditor
+none
+false
+
+F:\Prabhath\WPF\WPF MControls Library\CGEditor\CGEditor\App.xaml
+31955867125
+
+69581582467
+30-747616030
+ColorPickerStyle.xaml;ContentManagers\TextContentManager.xaml;ContentManagers\TickerContentManager.xaml;CustomPropertyEditors\BlurEditor.xaml;CustomPropertyEditors\TextOutlineColorEditor.xaml;CustomPropertyEditors\TextGradientEditor.xaml;CustomPropertyEditors\GlowEditor.xaml;CustomPropertyEditors\ShadowEditor.xaml;CustomPropertyEditors\SpeedEditor.xaml;CustomPropertyEditors\MiscEditor.xaml;CustomPropertyEditors\SimpleColorEditor.xaml;CustomPropertyEditors\TickerEditor.xaml;CustomPropertyEditors\PositionEditor.xaml;CustomPropertyEditors\VisibilityEditor.xaml;CustomPropertyEditors\TickerContentEditor.xaml;CustomPropertyEditors\TextContentEditor.xaml;CustomPropertyEditors\ShapeEditor.xaml;CustomPropertyEditors\FontEditor.xaml;CustomPropertyEditors\OutlineColorEditor.xaml;CustomPropertyEditors\RibbonControl.xaml;CustomPropertyEditors\GradientEditor.xaml;CustomPropertyEditors\OpenFileEditor.xaml;CustomPropertyEditors\OpenFlashEditor.xaml;CustomPropertyEditors\OpenImageEditor.xaml;CustomPropertyEditors\OpenTextEditor.xaml;DockingStyle.xaml;MainWindow.xaml;PreviewControl.xaml;Resources\VectorIcons.xaml;UserControls\ActionsControl.xaml;UserControls\XMLEditorControl.xaml;
+
+False
+

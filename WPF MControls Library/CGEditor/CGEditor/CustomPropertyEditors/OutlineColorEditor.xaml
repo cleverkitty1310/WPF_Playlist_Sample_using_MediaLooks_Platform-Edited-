@@ -1,0 +1,46 @@
+﻿<UserControl x:Class="CGEditor.CustomPropertyEditors.OutlineColorEditor"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+             xmlns:Fluent="clr-namespace:Fluent;assembly=Fluent" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/CGEditor;component/Resources/VectorIcons.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid HorizontalAlignment="Stretch" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Label Content="{StaticResource Palette}" Height="22" Padding="1" Margin="2,4,2,2" ToolTip="Color" VerticalAlignment="Center"/>
+        <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="0" Margin="0,4,0,0" >
+            <StackPanel Orientation="Horizontal" Name="StackColors">
+                <xctk:ColorPicker x:Name="CPColor0"  Width="36" Margin="2" ShowDisableButton="False" SelectedColorChanged="SelectedColorChanged"/>
+            </StackPanel>
+            <Button Content="+" x:Name="buttonAddGradient" VerticalAlignment="Center" Width="20" Margin="2" Click="buttonAddGradient_Click" Focusable="False"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2">
+            <Label Content="{StaticResource Gradient}" Height="22" Padding="1" VerticalAlignment="Center" Margin="2" ToolTip="Gradient type"/>
+            <Fluent:ComboBox x:Name="ComboGradientType"  AllowDrop="False"  Margin="-8,2,2,2"     VerticalAlignment="Center" MaxWidth="105" Width="105" IsEditable="False" SelectionChanged="ComboGradientType_SelectionChanged"/>
+            <Label Content="{StaticResource LineWidth}" Height="22" Width="22" Margin="10,2,2,2" Padding="1,1,1,0" ToolTip="Outline width"/>
+            <Fluent:Spinner x:Name="SpinnerOutlineWidth" HorizontalAlignment="Center" Margin="-10,5,2,2" Maximum="100" Format="" Width="65" MaxWidth="65" ValueChanged="SpinnerGradientAngle_ValueChanged"  />
+        </StackPanel>
+
+    </Grid>
+
+</UserControl>

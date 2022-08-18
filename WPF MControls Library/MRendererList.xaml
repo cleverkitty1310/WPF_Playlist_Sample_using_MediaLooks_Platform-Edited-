@@ -1,0 +1,51 @@
+﻿<UserControl x:Class="WPFMControls.MRendererList"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="109" d:DesignWidth="500">
+    <Grid Height="109">
+        <DataGrid Background="#FF323232" CellStyle="{StaticResource DataGridCellStyle1}" ColumnHeaderStyle="{StaticResource ColumnHeaderStyle}" AutoGenerateColumns="False" Height="109" CanUserAddRows="False" Name="rendererTable" VerticalAlignment="Top" CanUserReorderColumns="False" CanUserSortColumns="False" CanUserResizeRows="False" SelectionMode="Single" CanUserDeleteRows="True" RowHeaderWidth="0">
+            <DataGrid.Columns>
+                <DataGridTemplateColumn Header="  Start" Width="35">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <CheckBox Checked="ToggleButton_OnChecked" Unchecked="ToggleButton_OnUnchecked">                                
+                            </CheckBox>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+               
+                <DataGridTextColumn Header="   Renderer" Width="180" Binding="{Binding Path=renderer}" />
+
+                <DataGridTemplateColumn Header="  Line-in" Width="100">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <ComboBox ItemsSource="{Binding lineIn}" SelectedItem="{Binding LineInSelected, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                               
+                            </ComboBox>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn Header="  Line-Out" Width="100" >
+                    <DataGridTemplateColumn.CellTemplate>
+                    <DataTemplate>
+                            <ComboBox ItemsSource="{Binding lineOut}" SelectedItem="{Binding LineOutSelected, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                          
+                        </ComboBox> 
+                    </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>                    
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn Header="  Keying type" Width="80" >
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <ComboBox ItemsSource="{Binding Keying}" SelectedItem="{Binding KeyingSelected, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">                              
+                            </ComboBox></DataTemplate></DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

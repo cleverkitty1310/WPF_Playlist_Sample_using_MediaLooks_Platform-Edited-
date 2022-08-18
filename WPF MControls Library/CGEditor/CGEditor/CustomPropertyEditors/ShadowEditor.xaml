@@ -1,0 +1,75 @@
+﻿<UserControl x:Class="CGEditor.CustomPropertyEditors.ShadowEditor"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+             xmlns:Fluent="clr-namespace:Fluent;assembly=Fluent" 
+             mc:Ignorable="d" 
+             d:DesignHeight="200" d:DesignWidth="400">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/CGEditor;component/Resources/VectorIcons.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid HorizontalAlignment="Stretch" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="0" Margin="0,4,0,0">
+            <ToggleButton x:Name="ToggleShadow" Content="{StaticResource Shadow}"  Width="78"  Margin="2,2,2,2" Padding="4,6,4,4"  Focusable="False" ToolTip="Enadle shadow effect" MinHeight="22" Height="22" Checked="ToggleShadow_Checked" Unchecked="ToggleShadow_Unchecked"/>
+
+            <Label  Height="22" Width="22" Margin="5,2,2,2" Padding="1" VerticalAlignment="Center"  ToolTip="Shadow alpha" BorderThickness="0" >
+                <Label.Content>
+                    <Grid>
+                        <Path Data="{StaticResource GeometryTiles}" Stretch="Uniform">
+                            <Path.Fill>
+                                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                                    <GradientStop Color="White"/>
+                                    <GradientStop Color="#FF353535" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Path.Fill>
+                        </Path>
+                        <Path Data="{StaticResource GeometryAlpha}" Stretch="Uniform" Fill="Black" Margin="1,1,5,5"/>
+                    </Grid>
+                </Label.Content>
+            </Label>
+
+            <Slider x:Name="SliderShadowAlpha" Grid.Column="1" Grid.Row="0" Margin="2" Maximum="255" Width="80" ValueChanged="SliderShadowAlpha_ValueChanged"/>
+
+
+            <Label Content="{StaticResource OffsetX}" Height="22" Width="22" Padding="1,2,1,1" VerticalAlignment="Center" Margin="5,2,2,2" ToolTip="X offset"/>
+            <Fluent:Spinner x:Name="SpinnerOffsetX" HorizontalAlignment="Center" Margin="-11,2,2,2" Maximum="100" Width="65" MaxWidth="65" Format="" ValueChanged="SpinnerOffsetX_ValueChanged"  />
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="1" Margin="0,4,0,0">
+            <Label  Height="22" Width="22" Margin="2" Padding="1" VerticalAlignment="Center"  ToolTip="Shadow blur" BorderThickness="0" >
+                <Label.Content>
+                    <Grid>
+                        <Path Data="{StaticResource RoundCornerRectangle}" Stretch="Uniform" Fill="#FF838383" Margin="3,3,1,1"/>
+                        <Path Data="{StaticResource RoundCornerRectangle}" Stretch="Uniform" Fill="Black" Margin="1,1,3,3"/>
+                        
+                    </Grid>
+                </Label.Content>
+            </Label>
+            <Fluent:Spinner x:Name="SpinnerShadowBlur" HorizontalAlignment="Center" Margin="-11,2,2,2" Maximum="10" Width="65" MaxWidth="65" ValueChanged="SpinnerShadowBlur_ValueChanged" />
+
+            <Label Content="{StaticResource Palette}" Height="22" Width="22" Margin="5,2,2,2" Padding="2" VerticalAlignment="Center"  ToolTip="Shadow color" />
+            <xctk:ColorPicker x:Name="CPShadowColor"  Width="80" Margin="2" ShowDisableButton="False" SelectedColorChanged="CPShadowColor_SelectedColorChanged"  />
+
+            <Label Content="{StaticResource OffsetY}" Height="22" Width="22" Padding="1,2,1,1" VerticalAlignment="Center" Margin="5,2,2,2" ToolTip="Y offset" />
+            <Fluent:Spinner x:Name="SpinnerOffsetY" HorizontalAlignment="Center" Margin="-11,2,2,2" Maximum="100" Width="65" MaxWidth="65" Format="" ValueChanged="SpinnerOffsetY_ValueChanged"  />
+        </StackPanel>
+
+    </Grid>
+
+</UserControl>

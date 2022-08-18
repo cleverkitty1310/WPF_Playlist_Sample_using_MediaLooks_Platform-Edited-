@@ -1,0 +1,11 @@
+﻿<Window x:Class="WPFMControls.FormFileName"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        DataContext="{Binding RelativeSource={RelativeSource Self}}"
+        Icon="Resources\Logo.ico"
+        Title="FormFileName" xmlns:my="clr-namespace:WPFMControls" Loaded="Window_Loaded" Closing="Window_Closing" WindowStartupLocation="CenterOwner" ResizeMode="NoResize" SizeToContent="WidthAndHeight">
+    <Grid Background="#FF131313" Height="370" Width="360">
+        <my:MFileName HorizontalAlignment="Center" x:Name="mFileName1" VerticalAlignment="Top" />
+        <my:MPropsControl HorizontalAlignment="Center" Margin="0,116,0,0" x:Name="mPropsControl1" VerticalAlignment="Top" />
+    </Grid>
+</Window>

@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="CGEditor.PreviewControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="359" d:DesignWidth="599" KeyDown="UserControl_KeyDown" Focusable="True" MouseEnter="UserControl_MouseEnter">
+    <Grid Name="gridPreview" RenderTransformOrigin="0.5,0.5" ClipToBounds="True">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Image Name="imageCtrl" Stretch="Uniform" Grid.Row="0" Grid.Column="0" MouseLeftButtonDown="imageCtrl_MouseLeftButtonDown" MouseLeftButtonUp="imageCtrl_MouseLeftButtonUp" MouseRightButtonDown="imageCtrl_MouseRightButtonDown" MouseRightButtonUp="imageCtrl_MouseRightButtonUp" MouseMove="imageCtrl_MouseMove" MouseWheel="imageCtrl_MouseWheel" Drop="imageCtrl_Drop" AllowDrop="True" Focusable="True">
+          
+        </Image>
+        <Rectangle Height="1" HorizontalAlignment="Left"  Name="rectangleSelect" Stroke="Red" VerticalAlignment="Top" Width="1" Visibility="Hidden" RadiusY="3" RadiusX="3" />
+        <Label Name="labelStatus" Grid.Row="1" Grid.Column="0" Background="#FFC3C3C3" Content="Status" />
+        <Grid.Background>
+            <ImageBrush ImageSource="/CGEditor;component/Images/Tile2.png" Stretch="Fill" TileMode="Tile" Viewport="0,0,20.0027914763953,20.0027914763953" ViewportUnits="Absolute" />
+           
+        </Grid.Background>
+    </Grid>
+</UserControl>

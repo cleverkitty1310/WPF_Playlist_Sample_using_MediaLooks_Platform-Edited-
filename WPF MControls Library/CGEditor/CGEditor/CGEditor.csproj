@@ -1,0 +1,490 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AA3B2621-9F33-41B7-A966-D11450F185A1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CGEditor</RootNamespace>
+    <AssemblyName>CGEditor</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\DirectTakeIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="Fluent, Version=2.1.0.0, Culture=neutral, PublicKeyToken=3e436e32a8c5546f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ExternalDll\Fluent.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.AvalonEdit, Version=4.0.0.5950, Culture=neutral, PublicKeyToken=9cc39be672370310, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ExternalDll\ICSharpCode.AvalonEdit.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro, Version=0.13.1.0, Culture=neutral, PublicKeyToken=f4fb5a3c4d1e5b4f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ExternalDll\MahApps.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationUI, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="ReachFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\MedialooksDirectTake\packages\MahApps.Metro.0.13.1.0\lib\net40\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="Xceed.Wpf.AvalonDock, Version=2.1.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ExternalDll\Xceed.Wpf.AvalonDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.Toolkit, Version=2.1.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ExternalDll\Xceed.Wpf.Toolkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="CGItemWrappers\TickerLine.cs" />
+    <Compile Include="CGItemWrappers\Interfaces\IPath.cs" />
+    <Compile Include="CGItemWrappers\Interfaces\IGlow.cs" />
+    <Compile Include="CGItemWrappers\Interfaces\IBlur.cs" />
+    <Compile Include="CGItemWrappers\Interfaces\IShadow.cs" />
+    <Compile Include="CGItemWrappers\Interfaces\ISpeed.cs" />
+    <Compile Include="CGItemWrappers\Interfaces\IMisc.cs" />
+    <Compile Include="CGItemWrappers\Interfaces\ISimpleColor.cs" />
+    <Compile Include="CGItemWrappers\Interfaces\IPosition.cs" />
+    <Compile Include="CGItemWrappers\Interfaces\ITicker.cs" />
+    <Compile Include="CGItemWrappers\Interfaces\IVisible.cs" />
+    <Compile Include="CGItemWrappers\Interfaces\ITickerNewContent.cs" />
+    <Compile Include="CGItemWrappers\Interfaces\IText.cs" />
+    <Compile Include="CGItemWrappers\Interfaces\IShape.cs" />
+    <Compile Include="CustomPropertyEditors\BlurEditor.xaml.cs">
+      <DependentUpon>BlurEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomPropertyEditors\TextOutlineColorEditor.xaml.cs">
+      <DependentUpon>TextOutlineColorEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomPropertyEditors\TextGradientEditor.xaml.cs">
+      <DependentUpon>TextGradientEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomPropertyEditors\GlowEditor.xaml.cs">
+      <DependentUpon>GlowEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomPropertyEditors\ShadowEditor.xaml.cs">
+      <DependentUpon>ShadowEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomPropertyEditors\SpeedEditor.xaml.cs">
+      <DependentUpon>SpeedEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomPropertyEditors\MiscEditor.xaml.cs">
+      <DependentUpon>MiscEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomPropertyEditors\SimpleColorEditor.xaml.cs">
+      <DependentUpon>SimpleColorEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomPropertyEditors\TickerEditor.xaml.cs">
+      <DependentUpon>TickerEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomPropertyEditors\PositionEditor.xaml.cs">
+      <DependentUpon>PositionEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomPropertyEditors\VisibilityEditor.xaml.cs">
+      <DependentUpon>VisibilityEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomPropertyEditors\TickerContentEditor.xaml.cs">
+      <DependentUpon>TickerContentEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomPropertyEditors\TextContentEditor.xaml.cs">
+      <DependentUpon>TextContentEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomPropertyEditors\ShapeEditor.xaml.cs">
+      <DependentUpon>ShapeEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Misc\RelayCommand.cs" />
+    <Compile Include="UndoRedoManager\IUndoRedoRecord.cs" />
+    <Compile Include="UndoRedoManager\ListStackExtensions.cs" />
+    <Compile Include="UndoRedoManager\UndoRedoManager.cs" />
+    <Compile Include="UndoRedoManager\UndoRedoRecord.cs" />
+    <Compile Include="UndoRedoManager\UndoTransaction.cs" />
+    <Compile Include="UserControls\ActionsControl.xaml.cs">
+      <DependentUpon>ActionsControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\XMLEditorControl.xaml.cs">
+      <DependentUpon>XMLEditorControl.xaml</DependentUpon>
+    </Compile>
+    <Page Include="ColorPickerStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ContentManagers\TextContentManager.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ContentManagers\TickerContentManager.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomPropertyEditors\BlurEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CustomPropertyEditors\TextOutlineColorEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CustomPropertyEditors\TextGradientEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CustomPropertyEditors\GlowEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CustomPropertyEditors\ShadowEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CustomPropertyEditors\SpeedEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CustomPropertyEditors\MiscEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CustomPropertyEditors\SimpleColorEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CustomPropertyEditors\TickerEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CustomPropertyEditors\PositionEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CustomPropertyEditors\VisibilityEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CustomPropertyEditors\TickerContentEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CustomPropertyEditors\TextContentEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CustomPropertyEditors\ShapeEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CustomPropertyEditors\FontEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CustomPropertyEditors\OutlineColorEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CustomPropertyEditors\RibbonControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomPropertyEditors\GradientEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomPropertyEditors\OpenFileEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomPropertyEditors\OpenFlashEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomPropertyEditors\OpenImageEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomPropertyEditors\OpenTextEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DockingStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CGItemWrappers\Composition.cs" />
+    <Compile Include="CGItemWrappers\Group.cs" />
+    <Compile Include="CGItemWrappers\Flash.cs" />
+    <Compile Include="CGItemWrappers\Image.cs" />
+    <Compile Include="CGItemWrappers\Graphics.cs" />
+    <Compile Include="CGItemWrappers\Interfaces\IChangeNotify.cs" />
+    <Compile Include="CGItemWrappers\Interfaces\IFont.cs" />
+    <Compile Include="CGItemWrappers\Interfaces\IGradient.cs" />
+    <Compile Include="CGItemWrappers\Interfaces\IOutline.cs" />
+    <Compile Include="CGItemWrappers\Ticker.cs" />
+    <Compile Include="CGItemWrappers\WrapperHelpers.cs" />
+    <Compile Include="CGItemWrappers\_ItemSources.cs" />
+    <Compile Include="CGItemWrappers\CGBaseItem.cs" />
+    <Compile Include="CGItemWrappers\Text.cs" />
+    <Compile Include="ContentManagers\TextContentManager.xaml.cs">
+      <DependentUpon>TextContentManager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ContentManagers\TickerContentManager.xaml.cs">
+      <DependentUpon>TickerContentManager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomPropertyEditors\FontEditor.xaml.cs">
+      <DependentUpon>FontEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomPropertyEditors\OutlineColorEditor.xaml.cs">
+      <DependentUpon>OutlineColorEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomPropertyEditors\RibbonControl.xaml.cs">
+      <DependentUpon>RibbonControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomPropertyEditors\GradientEditor.xaml.cs">
+      <DependentUpon>GradientEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomPropertyEditors\ObservableCollections.cs" />
+    <Compile Include="CustomPropertyEditors\OpenFileEditor.xaml.cs">
+      <DependentUpon>OpenFileEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomPropertyEditors\OpenFlashEditor.xaml.cs">
+      <DependentUpon>OpenFlashEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomPropertyEditors\OpenImageEditor.xaml.cs">
+      <DependentUpon>OpenImageEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomPropertyEditors\OpenTextEditor.xaml.cs">
+      <DependentUpon>OpenTextEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Editor.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="PreviewControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\VectorIcons.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\ActionsControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\XMLEditorControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Misc\Helpers.cs" />
+    <Compile Include="PreviewControl.xaml.cs">
+      <DependentUpon>PreviewControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Tile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Tile2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\redo.png" />
+    <Resource Include="Images\undo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\DirectTakeIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\redo64.png" />
+    <Resource Include="Images\undo64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\redo.ico" />
+    <Resource Include="Images\undo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="MLCHARGENLib">
+      <Guid>{A792045E-B55C-473B-8C61-861E93A1D370}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="MPLATFORMLib">
+      <Guid>{92BEC1C8-EA18-45C7-B8C1-5B2CC1B531DE}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

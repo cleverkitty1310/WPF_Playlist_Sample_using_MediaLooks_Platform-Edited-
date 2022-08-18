@@ -1,0 +1,41 @@
+F:\Prabhath\WPF\WPF Playlist Sample\bin\x64\Release\WPF Playlist Sample.exe.config
+F:\Prabhath\WPF\WPF Playlist Sample\bin\x64\Release\WPF Playlist Sample.exe
+F:\Prabhath\WPF\WPF Playlist Sample\bin\x64\Release\CGEditor.exe
+F:\Prabhath\WPF\WPF Playlist Sample\bin\x64\Release\Fluent.dll
+F:\Prabhath\WPF\WPF Playlist Sample\bin\x64\Release\MahApps.Metro.dll
+F:\Prabhath\WPF\WPF Playlist Sample\bin\x64\Release\WPFMControls.dll
+F:\Prabhath\WPF\WPF Playlist Sample\bin\x64\Release\Interop.MPLATFORMLib.dll
+F:\Prabhath\WPF\WPF Playlist Sample\bin\x64\Release\Interop.MLCHARGENLib.dll
+F:\Prabhath\WPF\WPF Playlist Sample\bin\x64\Release\Xceed.Wpf.AvalonDock.dll
+F:\Prabhath\WPF\WPF Playlist Sample\bin\x64\Release\ICSharpCode.AvalonEdit.dll
+F:\Prabhath\WPF\WPF Playlist Sample\bin\x64\Release\Xceed.Wpf.Toolkit.dll
+F:\Prabhath\WPF\WPF Playlist Sample\bin\x64\Release\System.Windows.Interactivity.dll
+F:\Prabhath\WPF\WPF Playlist Sample\bin\x64\Release\CGEditor.exe.config
+F:\Prabhath\WPF\WPF Playlist Sample\bin\x64\Release\System.Windows.Interactivity.xml
+F:\Prabhath\WPF\WPF Playlist Sample\bin\x64\Release\de\System.Windows.Interactivity.resources.dll
+F:\Prabhath\WPF\WPF Playlist Sample\bin\x64\Release\en\System.Windows.Interactivity.resources.dll
+F:\Prabhath\WPF\WPF Playlist Sample\bin\x64\Release\es\System.Windows.Interactivity.resources.dll
+F:\Prabhath\WPF\WPF Playlist Sample\bin\x64\Release\fr\System.Windows.Interactivity.resources.dll
+F:\Prabhath\WPF\WPF Playlist Sample\bin\x64\Release\it\System.Windows.Interactivity.resources.dll
+F:\Prabhath\WPF\WPF Playlist Sample\bin\x64\Release\ja\System.Windows.Interactivity.resources.dll
+F:\Prabhath\WPF\WPF Playlist Sample\bin\x64\Release\ko\System.Windows.Interactivity.resources.dll
+F:\Prabhath\WPF\WPF Playlist Sample\bin\x64\Release\zh-Hans\System.Windows.Interactivity.resources.dll
+F:\Prabhath\WPF\WPF Playlist Sample\bin\x64\Release\zh-Hant\System.Windows.Interactivity.resources.dll
+F:\Prabhath\WPF\WPF Playlist Sample\obj\x64\Release\WPF Playlist Sample.csprojAssemblyReference.cache
+F:\Prabhath\WPF\WPF Playlist Sample\obj\x64\Release\Interop.MLCHARGENLib.dll
+F:\Prabhath\WPF\WPF Playlist Sample\obj\x64\Release\Interop.MPLATFORMLib.dll
+F:\Prabhath\WPF\WPF Playlist Sample\obj\x64\Release\WPF Playlist Sample.csproj.ResolveComReference.cache
+F:\Prabhath\WPF\WPF Playlist Sample\obj\x64\Release\MainWindow.baml
+F:\Prabhath\WPF\WPF Playlist Sample\obj\x64\Release\WindowStyle.baml
+F:\Prabhath\WPF\WPF Playlist Sample\obj\x64\Release\MainWindow.g.cs
+F:\Prabhath\WPF\WPF Playlist Sample\obj\x64\Release\WindowStyle.g.cs
+F:\Prabhath\WPF\WPF Playlist Sample\obj\x64\Release\App.g.cs
+F:\Prabhath\WPF\WPF Playlist Sample\obj\x64\Release\GeneratedInternalTypeHelper.g.cs
+F:\Prabhath\WPF\WPF Playlist Sample\obj\x64\Release\WPF Playlist Sample_MarkupCompile.cache
+F:\Prabhath\WPF\WPF Playlist Sample\obj\x64\Release\WPF Playlist Sample_MarkupCompile.lref
+F:\Prabhath\WPF\WPF Playlist Sample\obj\x64\Release\App.baml
+F:\Prabhath\WPF\WPF Playlist Sample\obj\x64\Release\WPF Playlist Sample.g.resources
+F:\Prabhath\WPF\WPF Playlist Sample\obj\x64\Release\WPFPlaylistSample.Properties.Resources.resources
+F:\Prabhath\WPF\WPF Playlist Sample\obj\x64\Release\WPF Playlist Sample.csproj.GenerateResource.cache
+F:\Prabhath\WPF\WPF Playlist Sample\obj\x64\Release\WPF Playlist Sample.csproj.CopyComplete
+F:\Prabhath\WPF\WPF Playlist Sample\obj\x64\Release\WPF Playlist Sample.exe

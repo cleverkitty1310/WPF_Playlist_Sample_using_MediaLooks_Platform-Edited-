@@ -1,0 +1,45 @@
+F:\Prabhath\WPF\WPF Playlist Sample\bin\x64\Debug\WPF Playlist Sample.exe.config
+F:\Prabhath\WPF\WPF Playlist Sample\bin\x64\Debug\WPF Playlist Sample.exe
+F:\Prabhath\WPF\WPF Playlist Sample\bin\x64\Debug\WPF Playlist Sample.pdb
+F:\Prabhath\WPF\WPF Playlist Sample\bin\x64\Debug\CGEditor.exe
+F:\Prabhath\WPF\WPF Playlist Sample\bin\x64\Debug\Fluent.dll
+F:\Prabhath\WPF\WPF Playlist Sample\bin\x64\Debug\MahApps.Metro.dll
+F:\Prabhath\WPF\WPF Playlist Sample\bin\x64\Debug\WPFMControls.dll
+F:\Prabhath\WPF\WPF Playlist Sample\bin\x64\Debug\Interop.MPLATFORMLib.dll
+F:\Prabhath\WPF\WPF Playlist Sample\bin\x64\Debug\Interop.MLCHARGENLib.dll
+F:\Prabhath\WPF\WPF Playlist Sample\bin\x64\Debug\Xceed.Wpf.AvalonDock.dll
+F:\Prabhath\WPF\WPF Playlist Sample\bin\x64\Debug\ICSharpCode.AvalonEdit.dll
+F:\Prabhath\WPF\WPF Playlist Sample\bin\x64\Debug\Xceed.Wpf.Toolkit.dll
+F:\Prabhath\WPF\WPF Playlist Sample\bin\x64\Debug\System.Windows.Interactivity.dll
+F:\Prabhath\WPF\WPF Playlist Sample\bin\x64\Debug\CGEditor.pdb
+F:\Prabhath\WPF\WPF Playlist Sample\bin\x64\Debug\CGEditor.exe.config
+F:\Prabhath\WPF\WPF Playlist Sample\bin\x64\Debug\WPFMControls.pdb
+F:\Prabhath\WPF\WPF Playlist Sample\bin\x64\Debug\System.Windows.Interactivity.xml
+F:\Prabhath\WPF\WPF Playlist Sample\bin\x64\Debug\de\System.Windows.Interactivity.resources.dll
+F:\Prabhath\WPF\WPF Playlist Sample\bin\x64\Debug\en\System.Windows.Interactivity.resources.dll
+F:\Prabhath\WPF\WPF Playlist Sample\bin\x64\Debug\es\System.Windows.Interactivity.resources.dll
+F:\Prabhath\WPF\WPF Playlist Sample\bin\x64\Debug\fr\System.Windows.Interactivity.resources.dll
+F:\Prabhath\WPF\WPF Playlist Sample\bin\x64\Debug\it\System.Windows.Interactivity.resources.dll
+F:\Prabhath\WPF\WPF Playlist Sample\bin\x64\Debug\ja\System.Windows.Interactivity.resources.dll
+F:\Prabhath\WPF\WPF Playlist Sample\bin\x64\Debug\ko\System.Windows.Interactivity.resources.dll
+F:\Prabhath\WPF\WPF Playlist Sample\bin\x64\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
+F:\Prabhath\WPF\WPF Playlist Sample\bin\x64\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
+F:\Prabhath\WPF\WPF Playlist Sample\obj\x64\Debug\WPF Playlist Sample.csprojAssemblyReference.cache
+F:\Prabhath\WPF\WPF Playlist Sample\obj\x64\Debug\Interop.MLCHARGENLib.dll
+F:\Prabhath\WPF\WPF Playlist Sample\obj\x64\Debug\Interop.MPLATFORMLib.dll
+F:\Prabhath\WPF\WPF Playlist Sample\obj\x64\Debug\WPF Playlist Sample.csproj.ResolveComReference.cache
+F:\Prabhath\WPF\WPF Playlist Sample\obj\x64\Debug\MainWindow.baml
+F:\Prabhath\WPF\WPF Playlist Sample\obj\x64\Debug\WindowStyle.baml
+F:\Prabhath\WPF\WPF Playlist Sample\obj\x64\Debug\MainWindow.g.cs
+F:\Prabhath\WPF\WPF Playlist Sample\obj\x64\Debug\WindowStyle.g.cs
+F:\Prabhath\WPF\WPF Playlist Sample\obj\x64\Debug\App.g.cs
+F:\Prabhath\WPF\WPF Playlist Sample\obj\x64\Debug\GeneratedInternalTypeHelper.g.cs
+F:\Prabhath\WPF\WPF Playlist Sample\obj\x64\Debug\WPF Playlist Sample_MarkupCompile.cache
+F:\Prabhath\WPF\WPF Playlist Sample\obj\x64\Debug\WPF Playlist Sample_MarkupCompile.lref
+F:\Prabhath\WPF\WPF Playlist Sample\obj\x64\Debug\App.baml
+F:\Prabhath\WPF\WPF Playlist Sample\obj\x64\Debug\WPF Playlist Sample.g.resources
+F:\Prabhath\WPF\WPF Playlist Sample\obj\x64\Debug\WPFPlaylistSample.Properties.Resources.resources
+F:\Prabhath\WPF\WPF Playlist Sample\obj\x64\Debug\WPF Playlist Sample.csproj.GenerateResource.cache
+F:\Prabhath\WPF\WPF Playlist Sample\obj\x64\Debug\WPF Playlist Sample.csproj.CopyComplete
+F:\Prabhath\WPF\WPF Playlist Sample\obj\x64\Debug\WPF Playlist Sample.exe
+F:\Prabhath\WPF\WPF Playlist Sample\obj\x64\Debug\WPF Playlist Sample.pdb

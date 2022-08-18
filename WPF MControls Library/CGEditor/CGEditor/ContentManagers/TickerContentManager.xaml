@@ -1,0 +1,40 @@
+﻿<Window x:Class="CGEditor.ContentManagers.TickerContentManager"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="New content for ticker item" Height="300" Width="559">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+
+        <!--<Image Source="/CGEditor;component/Images/folder.ico" MouseUp="Image_MouseUp" Margin ="5,5,5,5" />-->
+
+        <RadioButton  Grid.Row="0" Grid.Column="0" Content="Text" Margin ="5,5,5,5"  />
+        <TextBox Grid.Row="0" Grid.Column="1" Margin ="5,5,5,5" Name="TextBoxContent"/>
+
+        <RadioButton  Grid.Row="1" Grid.Column="0" Content="From File" Margin ="5,5,5,5"  />
+
+
+        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
+            <TextBox Margin ="5,5,5,5" Name="TextBoxPath" Width="432" />
+
+            <Image Source="/CGEditor;component/Images/folder.ico"  Grid.Row="1" Grid.Column="1" />
+        </StackPanel>
+
+   
+
+ 
+
+        <StackPanel  Grid.Row="2" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment ="Right">
+            <Button Name="ButtonOk" Content="Ok" Margin ="5,5,5,5"/>
+            <Button Name="ButtonCancel" Content="Cancel" Margin ="5,5,5,5" Width="50" />
+        </StackPanel>
+    </Grid>
+</Window>

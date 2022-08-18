@@ -1,0 +1,12 @@
+﻿<UserControl x:Class="WPFMControls.MPersistControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="21" d:DesignWidth="120">
+    <Grid>
+        <Button Content="Save" Name="buttonSave" Click="buttonSave_Click" HorizontalAlignment="Left" Width="58" Style="{StaticResource FullBorderButtonStyle}"/>
+        <Button Content="Load" HorizontalAlignment="Left" Name="buttonLoad" Width="58" Margin="62,0,0,0" Click="buttonLoad_Click" Style="{StaticResource FullBorderButtonStyle}"/>
+    </Grid>
+</UserControl>

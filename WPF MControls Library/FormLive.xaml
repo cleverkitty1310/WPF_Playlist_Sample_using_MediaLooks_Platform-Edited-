@@ -1,0 +1,12 @@
+﻿<Window x:Class="WPFMControls.FormLive"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        DataContext="{Binding RelativeSource={RelativeSource Self}}"
+        Style="{DynamicResource SkinWindowStyle}"
+        Icon="Resources\Logo.ico"
+        Template="{DynamicResource WindowTemplate }"
+        Title="FormLive" xmlns:my="clr-namespace:WPFMControls" Loaded="Window_Loaded" Closed="Window_Closed" SizeToContent="WidthAndHeight" ResizeMode="NoResize" WindowStartupLocation="CenterOwner">
+    <Grid Background="#FF131313" Height="330" Width="911">
+        <my:MLiveControl HorizontalAlignment="Left" x:Name="mLiveControl1" VerticalAlignment="Top" Width="901" />
+    </Grid>
+</Window>

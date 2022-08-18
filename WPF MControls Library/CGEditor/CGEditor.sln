@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CGEditor", "CGEditor\CGEditor.csproj", "{AA3B2621-9F33-41B7-A966-D11450F185A1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AA3B2621-9F33-41B7-A966-D11450F185A1}.Debug|x64.ActiveCfg = Debug|x64
+		{AA3B2621-9F33-41B7-A966-D11450F185A1}.Debug|x64.Build.0 = Debug|x64
+		{AA3B2621-9F33-41B7-A966-D11450F185A1}.Debug|x86.ActiveCfg = Debug|x86
+		{AA3B2621-9F33-41B7-A966-D11450F185A1}.Debug|x86.Build.0 = Debug|x86
+		{AA3B2621-9F33-41B7-A966-D11450F185A1}.Release|x64.ActiveCfg = Release|x64
+		{AA3B2621-9F33-41B7-A966-D11450F185A1}.Release|x64.Build.0 = Release|x64
+		{AA3B2621-9F33-41B7-A966-D11450F185A1}.Release|x86.ActiveCfg = Release|x86
+		{AA3B2621-9F33-41B7-A966-D11450F185A1}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

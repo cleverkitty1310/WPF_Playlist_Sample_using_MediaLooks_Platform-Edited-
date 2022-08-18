@@ -1,0 +1,39 @@
+﻿<UserControl x:Class="WPFMControls.MPlaylistControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="223" d:DesignWidth="500">
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        <DataGrid CellStyle="{StaticResource DataGridCellStyle1}"  ColumnHeaderStyle="{StaticResource ColumnHeaderStyle}" AutoGenerateColumns="False"
+                  GridLinesVisibility="All"
+                  
+                  CanUserAddRows="False" Name="PlaylistTable" HorizontalScrollBarVisibility="Visible" 
+                  CanUserReorderColumns="False" CanUserSortColumns="False" CanUserResizeRows="False" SelectionMode="Single" CanUserDeleteRows="True" MouseDoubleClick="PlaylistTable_MouseDoubleClick" 
+                  SelectionChanged="PlaylistTable_SelectionChanged" HorizontalGridLinesBrush="#FFC4C4C4" VerticalGridLinesBrush="#FFC4C4C4" RowHeaderWidth="0"
+                  HorizontalAlignment="Stretch" Margin="5" Background="#FF323232">
+            <DataGrid.Columns >
+                <DataGridTextColumn Header="  Pos" Width="60" Binding="{Binding Path=pos}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="File / Command" Binding="{Binding Path=filecommand}"  Width="300" IsReadOnly="True" />
+                <DataGridTextColumn Header="In / Param" Binding="{Binding Path=inparams}" Width="70" IsReadOnly="False" />
+                <DataGridTextColumn Header="Out" Binding="{Binding Path=outpoint}"  Width="70" IsReadOnly="False" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="1">
+            <Button Content="Add File" Height="19" Name="buttonAddFile" Width="55" Click="button1_Click" FontSize="11" Padding="0" Margin="5" Style="{StaticResource FullBorderButtonStyle}"/>
+            <Button Content="Remove" Height="19" Name="buttonRemove" Width="64" Click="buttonRemove_Click" FontSize="11" IsEnabled="False" Padding="0" Margin="5" Style="{StaticResource FullBorderButtonStyle}">
+            </Button>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Right">
+            <Button Content="⇑" Height="19" Name="buttonUp" Width="22" FontSize="12" Padding="0" Click="buttonUp_Click" Margin="5" Style="{StaticResource NormalButtonStyle}"/>
+            <Button Content="⇓" FontSize="12" Height="19" Name="buttonDown" Padding="0" Width="22" Click="buttonDown_Click" Margin="5" Style="{StaticResource NormalButtonStyle}"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

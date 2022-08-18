@@ -1,0 +1,231 @@
+﻿<UserControl xmlns:CustomPropertyEditors="clr-namespace:CGEditor.CustomPropertyEditors"  x:Class="CGEditor.CustomPropertyEditors.RibbonControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" 
+             xmlns:fluent="clr-namespace:Fluent;assembly=Fluent" 
+             HorizontalAlignment="Stretch"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="1300"
+             >
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/CGEditor;component/Resources/VectorIcons.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid >
+        <fluent:Ribbon x:Name="ribbon" FontSize="12" Foreground="Black" Background="White" CanQuickAccessLocationChanging="False" >
+
+            <fluent:Ribbon.Menu>
+                <fluent:Backstage>
+                    <fluent:BackstageTabControl>
+                        <fluent:Button x:Name="LoadConfig" Header="Load CG Config" Click="LoadConfig_Click"/>
+                        <fluent:Button x:Name="SaveConfig" Header="Save CG Config" Click="SaveConfig_Click" />
+                        <fluent:SeparatorTabItem />
+                        <fluent:Button Header="Exit" Click="Button_Click"/>
+                    </fluent:BackstageTabControl>
+                </fluent:Backstage>
+            </fluent:Ribbon.Menu>
+
+
+            <fluent:Ribbon.QuickAccessItems>
+                <fluent:QuickAccessMenuItem IsChecked="true">
+                    <fluent:Button x:Name="BtnUndo" Header="Undo" Icon="..\Images\undo.png" Click="BtnUndo_Click"  />
+                </fluent:QuickAccessMenuItem>
+                <fluent:QuickAccessMenuItem IsChecked="true">
+                    <fluent:Button x:Name="BtnRedo" Header="Redo" Icon="..\Images\redo.png" Click="BtnRedo_Click"  />
+                </fluent:QuickAccessMenuItem>
+
+            </fluent:Ribbon.QuickAccessItems>
+
+            <!--==============================================BASIC PROPS===============================================-->
+            <fluent:RibbonTabItem Header="Common properties">
+                <fluent:RibbonGroupBox Width="Auto" Header="Visibility">
+                    <CustomPropertyEditors:VisibilityEditor x:Name="BasicVisibilityEditor"/>
+                </fluent:RibbonGroupBox>
+                <fluent:RibbonGroupBox Header="Position/Size" Width="Auto" >
+                    <CustomPropertyEditors:PositionEditor x:Name="BasicPositionEditor"/>
+                </fluent:RibbonGroupBox>
+                <fluent:RibbonGroupBox  Header="Alpha/BackColor"  Width="Auto" >
+                    <CustomPropertyEditors:SimpleColorEditor x:Name="BasicColorEditor"/>
+                </fluent:RibbonGroupBox>
+
+                <fluent:RibbonGroupBox  Header="Misc"  Width="Auto" >
+                    <CustomPropertyEditors:MiscEditor x:Name="BasicMiscEditor"/>
+                </fluent:RibbonGroupBox>
+            </fluent:RibbonTabItem>
+            <!--==============================================EFFECTS====================================================-->
+            <fluent:RibbonTabItem Header="Effects" >
+                <fluent:RibbonGroupBox  Header="Speed"  Width="Auto" >
+                    <CustomPropertyEditors:SpeedEditor x:Name="EffectsSpeedEditor"/>
+                </fluent:RibbonGroupBox>
+                <fluent:RibbonGroupBox  Header="Shadow"  Width="Auto" >
+                    <CustomPropertyEditors:ShadowEditor x:Name="EffectsShadowEditor"/>
+                </fluent:RibbonGroupBox>
+                <fluent:RibbonGroupBox  Header="Blur"  Width="Auto" >
+                    <CustomPropertyEditors:BlurEditor x:Name="EffectsBlurEditor"/>
+                </fluent:RibbonGroupBox>
+                <fluent:RibbonGroupBox  Header="Glow"  Width="Auto" >
+                    <CustomPropertyEditors:GlowEditor x:Name="EffectsGlowEditor"/>
+                </fluent:RibbonGroupBox>
+            </fluent:RibbonTabItem>
+            <!--==============================================TEXT PROPS=================================================-->
+            <fluent:RibbonTabItem x:Name="TabText" Header="Text Properties" IsSelected="True">
+                <fluent:RibbonGroupBox Header="Text">
+                    <CustomPropertyEditors:TextContentEditor x:Name="TextContEditor" Width="330"/>
+                </fluent:RibbonGroupBox>
+                <fluent:RibbonGroupBox Header="Text" Width="Auto">
+                    <Grid>
+                        <CustomPropertyEditors:GradientEditor x:Name="TextColorEditor" />
+                    </Grid>
+                </fluent:RibbonGroupBox>
+                <fluent:RibbonGroupBox Header="Outline" Width="Auto" >
+                    <Grid  >
+                        <CustomPropertyEditors:OutlineColorEditor x:Name="TextOutlineEditor"/>
+                    </Grid>
+                </fluent:RibbonGroupBox>
+                <fluent:RibbonGroupBox  Header="Font" Width="Auto" >
+                    <Grid>
+                        <CustomPropertyEditors:FontEditor x:Name="TextFontEditor"/>
+                    </Grid>
+                </fluent:RibbonGroupBox>
+            </fluent:RibbonTabItem>
+            <!--==============================================GRAPHICS PROPS=============================================-->
+            <fluent:RibbonTabItem x:Name="TabGraphics" Header="Graphics Properties" >
+                <fluent:RibbonGroupBox Header="Shape" Width="Auto" >
+                    <CustomPropertyEditors:ShapeEditor x:Name="GraphicsShapeEditor" />
+                </fluent:RibbonGroupBox>
+                <fluent:RibbonGroupBox Header="Color" Width="Auto" >
+                    <CustomPropertyEditors:GradientEditor x:Name="GraphicsColorEditor" />
+                </fluent:RibbonGroupBox>
+                <fluent:RibbonGroupBox Header="Outline" Width="Auto" >
+                    <CustomPropertyEditors:OutlineColorEditor x:Name="GraphicsOutlineEditor"/>
+                </fluent:RibbonGroupBox>
+            </fluent:RibbonTabItem>
+            <!--==============================================TICKER PROPS=============================================-->
+            <fluent:RibbonTabItem x:Name="TabTicker" Header="Ticker Properties" IsSelected="True" >
+                <fluent:RibbonGroupBox Header="New content" Width="Auto" >
+                    <CustomPropertyEditors:TickerContentEditor x:Name="TickerNewContentEditor" Width="330"/>
+                </fluent:RibbonGroupBox>
+                <fluent:RibbonGroupBox Header="Ticker properties" Width="Auto" >
+                    <CustomPropertyEditors:TickerEditor x:Name="TickerPropsEditor"/>
+                </fluent:RibbonGroupBox>
+                <fluent:RibbonGroupBox Header="Text" Width="Auto">
+                <Grid>
+                    <CustomPropertyEditors:TextGradientEditor x:Name="TickerTextColorEditor" />
+                </Grid>
+                </fluent:RibbonGroupBox>
+                <fluent:RibbonGroupBox Header="Outline" Width="Auto" >
+                    <Grid  >
+                        <CustomPropertyEditors:TextOutlineColorEditor x:Name="TickerTextOutlineEditor"/>
+                    </Grid>
+                </fluent:RibbonGroupBox>
+                <fluent:RibbonGroupBox  Header="Font" Width="Auto" >
+                    <Grid>
+                        <CustomPropertyEditors:FontEditor x:Name="TickerTextFontEditor"/>
+                    </Grid>
+                </fluent:RibbonGroupBox>
+                <fluent:RibbonGroupBox Header="Shape type" Width="Auto" >
+                    <CustomPropertyEditors:ShapeEditor  x:Name="TickerShapeEditor" />
+                </fluent:RibbonGroupBox>
+                <fluent:RibbonGroupBox Header="Shape color" Width="Auto" >
+                    <CustomPropertyEditors:GradientEditor x:Name="TickerColorEditor" />
+                </fluent:RibbonGroupBox>
+                <fluent:RibbonGroupBox Header="Shape outline" Width="Auto" >
+                    <CustomPropertyEditors:OutlineColorEditor x:Name="TickerOutlineEditor"/>
+                </fluent:RibbonGroupBox>
+            </fluent:RibbonTabItem>
+            <!--==============================================IMAGE PROPS=============================================-->
+            <fluent:RibbonTabItem x:Name="TabImage" Header="Image Properties" >
+                <fluent:RibbonGroupBox Header="Image source" Width="Auto" >
+                    <CustomPropertyEditors:OpenImageEditor x:Name="ImageEditor" Width="330"/>
+                </fluent:RibbonGroupBox>
+            </fluent:RibbonTabItem>
+            <!--==============================================FLASH PROPS=============================================-->
+            <fluent:RibbonTabItem x:Name="TabFlash" Header="Flash Properties" >
+                <fluent:RibbonGroupBox Header="Image source" Width="Auto" >
+                    <CustomPropertyEditors:OpenFlashEditor x:Name="FlashEditor" Width="330"/>
+                </fluent:RibbonGroupBox>
+            </fluent:RibbonTabItem>
+            <!--==============================================ACTIONS=============================================-->
+            <fluent:RibbonTabItem Header="Actions" Background="Black"  >
+                <fluent:RibbonGroupBox x:Name="GroupActions" Header="Grouping" Width="Auto" >
+                    <fluent:Button x:Name="BtnGroup" Header="Group" Click="BtnGroup_Click">
+                        <fluent:Button.LargeIcon>
+                            <Label Content="{StaticResource Group}" Padding="0"/>
+                        </fluent:Button.LargeIcon>
+                    </fluent:Button>
+                    <fluent:Button x:Name="BtnUnGroup" Header="Ungroup" Click="BtnUnGroup_Click">
+                        <fluent:Button.LargeIcon>
+                            <Label Content="{StaticResource UnGroup}" Padding="0"/>
+                        </fluent:Button.LargeIcon>
+                    </fluent:Button>
+                </fluent:RibbonGroupBox>
+                <fluent:RibbonGroupBox x:Name="GroupZOrder" Header="Z Order" Width="Auto" >
+                    <fluent:Button x:Name="BtnUp" fluent:RibbonAttachedProperties.RibbonSizeDefinition="Large" Header="Layer Up" Click="BtnUp_Click" >
+                        <fluent:Button.LargeIcon>
+                            <Label Content="{StaticResource LayerUp}" Padding="0"/>
+                        </fluent:Button.LargeIcon>
+                    </fluent:Button>
+                    <fluent:Button x:Name="BtnDown" Header="Layer Down" fluent:RibbonAttachedProperties.RibbonSizeDefinition="Large" Click="BtnDown_Click">
+                        <fluent:Button.LargeIcon>
+                            <Label Content="{StaticResource LayerDown}" Padding="0"/>
+                        </fluent:Button.LargeIcon>
+                    </fluent:Button>
+                    <fluent:Button x:Name="BtnToFront" fluent:RibbonAttachedProperties.RibbonSizeDefinition="Large" Header="Bring to Front" Click="BtnToFront_Click" >
+                        <fluent:Button.LargeIcon>
+                            <Label Content="{StaticResource ToFront}" Padding="0"/>
+                        </fluent:Button.LargeIcon>
+                    </fluent:Button>
+                    <fluent:Button x:Name="BtnToBack" fluent:RibbonAttachedProperties.RibbonSizeDefinition="Large" Header="Send to Back" Click="BtnToBack_Click">
+                        <fluent:Button.LargeIcon>
+                            <Label Content="{StaticResource ToBack}" Padding="0"/>
+                        </fluent:Button.LargeIcon>
+                    </fluent:Button>
+                </fluent:RibbonGroupBox>
+
+                <fluent:RibbonGroupBox x:Name="GroupAlign" Header="Align" Width="Auto" >
+                    <StackPanel Orientation="Horizontal">
+                        <fluent:Button x:Name="AlignLefts" fluent:RibbonAttachedProperties.RibbonSizeDefinition="Large"  Header="Align Lefts" Click="AlignLefts_Click">
+                            <fluent:Button.LargeIcon>
+                                <Label Content="{StaticResource AlignLefts}" Padding="0"/>
+                            </fluent:Button.LargeIcon>
+                        </fluent:Button>
+                        <fluent:Button x:Name="AlignCenters" fluent:RibbonAttachedProperties.RibbonSizeDefinition="Large" Header="Align Centers" Click="AlignCenters_Click">
+                            <fluent:Button.LargeIcon>
+                                <Label Content="{StaticResource AlignCenters}" Padding="0"/>
+                            </fluent:Button.LargeIcon>
+                        </fluent:Button>
+                        <fluent:Button x:Name="AlignRights" fluent:RibbonAttachedProperties.RibbonSizeDefinition="Large" Header="Align Rights" Click="AlignRights_Click">
+                            <fluent:Button.LargeIcon>
+                                <Label Content="{StaticResource AlignRights}" Padding="0"/>
+                            </fluent:Button.LargeIcon>
+                        </fluent:Button>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <fluent:Button x:Name="AlignTops" fluent:RibbonAttachedProperties.RibbonSizeDefinition="Large" Header="AlignL Tops" Click="AlignTops_Click">
+                            <fluent:Button.LargeIcon>
+                                <Label Content="{StaticResource AlignTops}" Padding="0"/>
+                            </fluent:Button.LargeIcon>
+                        </fluent:Button>
+                        <fluent:Button x:Name="AlignMiddles" fluent:RibbonAttachedProperties.RibbonSizeDefinition="Large" Header="Align Middles" Click="AlignMiddles_Click">
+                            <fluent:Button.LargeIcon>
+                                <Label Content="{StaticResource AlignMiddles}" Padding="0"/>
+                            </fluent:Button.LargeIcon>
+                        </fluent:Button>
+                        <fluent:Button x:Name="AlignBottoms" fluent:RibbonAttachedProperties.RibbonSizeDefinition="Large"  Header="Align Bottoms" Click="AlignBottoms_Click">
+                            <fluent:Button.LargeIcon>
+                                <Label Content="{StaticResource AlignBottoms}" Padding="0"/>
+                            </fluent:Button.LargeIcon>
+                        </fluent:Button>
+                    </StackPanel>
+                </fluent:RibbonGroupBox>
+            </fluent:RibbonTabItem>
+        </fluent:Ribbon>
+    </Grid>
+</UserControl>

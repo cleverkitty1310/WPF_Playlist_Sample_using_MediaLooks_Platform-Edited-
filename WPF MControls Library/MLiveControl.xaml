@@ -1,0 +1,47 @@
+﻿<UserControl x:Class="WPFMControls.MLiveControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="320" d:DesignWidth="901" xmlns:my="clr-namespace:WPFMControls" xmlns:my1="clr-namespace:BBIM">
+    <Grid Height="320" Background="#FF131313">
+        <Label Content="Video" Height="28" HorizontalAlignment="Left" Margin="7,22,0,0" Name="label2q" VerticalAlignment="Top" Foreground="White" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="54,22,0,0" Name="comboBoxVideo" VerticalAlignment="Top" Width="252" SelectionChanged="ComboBoxAvSelectedIndexChanged" />
+        <Button Content="Props" Height="23" HorizontalAlignment="Left" Margin="313,22,0,0" Name="buttonV" VerticalAlignment="Top" Width="75" Click="buttonV_Click" />
+        <Label Content="Line" Height="28" HorizontalAlignment="Left" Margin="7,51,0,0" Name="label3q" VerticalAlignment="Top" Foreground="White" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="54,51,0,0" Name="comboBoxVL" VerticalAlignment="Top" Width="252" SelectionChanged="ComboBoxAvSelectedIndexChanged" />
+        <Label Content="Format" Height="28" HorizontalAlignment="Left" Margin="7,80,0,0" Name="label4q" VerticalAlignment="Top" Foreground="White" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="54,80,0,0" Name="comboBoxVF" VerticalAlignment="Top" Width="252" SelectionChanged="ComboBoxAvfSelectedIndexChanged" />
+        <Button Content="Props" Height="23" HorizontalAlignment="Left" Margin="313,80,0,0" Name="buttonVF" VerticalAlignment="Top" Width="75" Click="buttonVF_Click" />
+        <Label Content="Audio Device" Height="28" Margin="7,110,800,0" Name="label5q" VerticalAlignment="Top" Foreground="White" />
+        <Label Content="Audio" Height="28" HorizontalAlignment="Left" Margin="7,144,0,0" Name="label6q" VerticalAlignment="Top" Foreground="White" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="54,144,0,0" Name="comboBoxAudio" VerticalAlignment="Top" Width="252" SelectionChanged="ComboBoxAvSelectedIndexChanged" />
+        <Button Content="Props" Height="23" HorizontalAlignment="Left" Margin="313,144,0,0" Name="buttonA" VerticalAlignment="Top" Width="75" Click="buttonA_Click" />
+        <Label Content="Line" Height="28" HorizontalAlignment="Left" Margin="7,173,0,0" Name="label7q" VerticalAlignment="Top" Foreground="White" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="54,173,0,0" Name="comboBoxAL" VerticalAlignment="Top" Width="252" SelectionChanged="ComboBoxAvSelectedIndexChanged" />
+        <Label Content="Format" Height="28" HorizontalAlignment="Left" Margin="7,202,0,0" Name="label8q" VerticalAlignment="Top" Foreground="White" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="54,202,0,0" Name="comboBoxAF" VerticalAlignment="Top" Width="252" SelectionChanged="ComboBoxAvfSelectedIndexChanged" />
+        <Button Content="Props" Height="23" HorizontalAlignment="Left" Margin="313,202,0,0" Name="button" VerticalAlignment="Top" Width="75" Click="button_Click" />
+        <Label Content="Video Device" Height="28" Margin="7,0,800,0" Name="label1q" VerticalAlignment="Top" Foreground="White" />
+        <Button Content="Close Device" Height="23" HorizontalAlignment="Left" Margin="186,231,0,0" Name="buttonClose" VerticalAlignment="Top" Width="120" Click="buttonClose_Click" />
+        <Button Content="Init Device" Height="23" HorizontalAlignment="Left" Margin="54,231,0,0" Name="buttonInit" VerticalAlignment="Top" Width="120" Click="buttonInit_Click" />
+        <Rectangle Fill="#FF131313" Height="350" Name="rectangle3" Panel.ZIndex="-1" Stroke="Black" VerticalAlignment="Top" HorizontalAlignment="Left" Width="401" />
+        <CheckBox Content="Enable Delay" Height="16" HorizontalAlignment="Left" Margin="12,260,0,0" Name="checkBoxDelay" VerticalAlignment="Top" Checked="checkBoxDelay_Checked" Unchecked="checkBoxDelay_Unchecked" />
+        <Label Content="Quality:" Height="21" HorizontalAlignment="Left" Margin="121,260,0,0" Name="label9" VerticalAlignment="Top" Padding="0" Foreground="White" />
+        <Label Content="Buffered (sec):" Height="20" HorizontalAlignment="Left" Margin="239,260,0,0" Name="label10" VerticalAlignment="Top" Padding="0" Foreground="White" />
+        <Slider Height="23" HorizontalAlignment="Left" Margin="12,286,0,0" Name="trackBarSeek" VerticalAlignment="Top" Width="302" Minimum="-1000" Maximum="0" ValueChanged="trackBarSeek_ValueChanged" TickFrequency="50" />
+        <my1:NumericUpDown Height="20" HorizontalAlignment="Left" Margin="167,259,0,0" x:Name="numericDelayQuality" VerticalAlignment="Top" Width="66" ValueChanged="numericDelayQuality_ValueChanged" />
+        <my1:NumericUpDown Height="20" HorizontalAlignment="Left" Margin="323,259,0,0" x:Name="numericDelayTime" VerticalAlignment="Top" Width="65" />
+        <my1:NumericUpDown Height="20" HorizontalAlignment="Left" Margin="323,287,0,0" x:Name="numericPos" VerticalAlignment="Top" Width="65" ValueChanged="numericPos_ValueChanged" />
+        <Grid Background="#FF0D0D0D" HorizontalAlignment="Right">
+            <Rectangle Height="300" Fill="#FF8B959B" HorizontalAlignment="Left" Name="rectangle1" VerticalAlignment="Top" Width="492" />
+            <MediaElement Height="300" HorizontalAlignment="Left" Name="preview" VerticalAlignment="Top" Width="492" Stretch="Fill" UnloadedBehavior="Manual" />
+            <CheckBox Content="Video Preview" HorizontalAlignment="Right" IsChecked="True" Margin="0,0,295,0" Name="checkBoxVideo" Checked="CheckBoxVideoChecked" Unchecked="CheckBoxVideoUnchecked" Height="18" VerticalAlignment="Bottom" />
+            <CheckBox Content="Audio Preview" Height="18" HorizontalAlignment="Left" Name="checkBoxAudio" VerticalAlignment="Bottom" Checked="CheckBoxAudioChecked" Unchecked="CheckBoxAudioUnchecked" />
+            <Slider Height="17" HorizontalAlignment="Right" Maximum="100" Name="trackBar" Value="50" VerticalAlignment="Bottom" Width="195" ValueChanged="TrackBarValueChanged" />
+            <Label Content="Audio Volume:" Height="18" HorizontalAlignment="Left" Margin="213,0,0,0" Name="label1" VerticalAlignment="Bottom" Foreground="White" Padding="0" />
+        </Grid>
+    </Grid>
+    
+</UserControl>

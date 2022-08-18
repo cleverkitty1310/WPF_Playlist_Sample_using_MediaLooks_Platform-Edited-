@@ -1,0 +1,72 @@
+﻿<UserControl x:Class="CGEditor.CustomPropertyEditors.VisibilityEditor"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+             xmlns:Fluent="clr-namespace:Fluent;assembly=Fluent" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/CGEditor;component/Resources/VectorIcons.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid HorizontalAlignment="Stretch" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="0" Margin="0,4,0,0">
+            <ToggleButton x:Name="ToggleVisible" BorderThickness="0"  Width="50" Height="50" Margin="4" Padding="5" Focusable="False" Background="Transparent" ToolTip="Visibility" Checked="ToggleVisible_Checked" Unchecked="ToggleVisible_Unchecked" IsChecked="True" >
+                <ToggleButton.Template>
+                    <ControlTemplate TargetType="{x:Type ToggleButton}">
+                        <Border CornerRadius="3" Background="{TemplateBinding Background}">
+                            <ContentPresenter Margin="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsChecked" Value="True">
+                                <Setter Property="Content" Value="{StaticResource EyeOpened}">
+                                </Setter>
+                            </Trigger>
+                            <Trigger Property="IsChecked" Value="False">
+                                <Setter Property="Content" Value="{StaticResource EyeClosed}">
+                                </Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </ToggleButton.Template>
+            </ToggleButton>
+
+            <!--<Label Width="50" Height="50" Margin="4" Padding="1" BorderThickness="0" Focusable="False" ToolTip="Alpha">
+                <Label.Content>
+                    <Grid>
+                        <Path Data="{StaticResource GeometryTiles}" Stretch="Uniform">
+                            <Path.Fill>
+                                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                                    <GradientStop Color="White"/>
+                                    <GradientStop Color="#FF353535" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Path.Fill>
+                        </Path>
+                        <Path Data="{StaticResource GeometryAlpha}" Stretch="Uniform" Fill="Black" Margin="1,1,12,12"/>
+                    </Grid>
+                </Label.Content>
+            </Label>-->
+            
+            <!--<StackPanel>
+                <Slider x:Name="SliderAlpha" Grid.Column="1" Grid.Row="0" Margin="2,6,2,2" Maximum="255" Width="80" ValueChanged="SliderAlpha_ValueChanged" ToolTip="Alpha"/>
+                <Fluent:Spinner x:Name="SpinnerAlpha" VerticalAlignment="Center" Margin="-10,4,2,2" Minimum="0" Maximum="255" Format="" Width="92" MaxWidth="92" ToolTip="Alpha" ValueChanged="SpinnerAlpha_ValueChanged" />
+            </StackPanel>-->
+        </StackPanel>
+    </Grid>
+
+</UserControl>

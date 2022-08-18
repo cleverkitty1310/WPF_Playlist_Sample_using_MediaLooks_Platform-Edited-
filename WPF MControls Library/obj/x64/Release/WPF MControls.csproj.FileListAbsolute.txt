@@ -1,0 +1,46 @@
+F:\Prabhath\WPF\WPF MControls Library\bin\x64\Release\WPFMControls.dll
+F:\Prabhath\WPF\WPF MControls Library\bin\x64\Release\Interop.MPLATFORMLib.dll
+F:\Prabhath\WPF\WPF MControls Library\obj\x64\Release\Interop.MPLATFORMLib.dll
+F:\Prabhath\WPF\WPF MControls Library\obj\x64\Release\WPF MControls.csproj.ResolveComReference.cache
+F:\Prabhath\WPF\WPF MControls Library\obj\x64\Release\MFileRateControl.baml
+F:\Prabhath\WPF\WPF MControls Library\obj\x64\Release\MFileSeeking.baml
+F:\Prabhath\WPF\WPF MControls Library\obj\x64\Release\MFileState.baml
+F:\Prabhath\WPF\WPF MControls Library\obj\x64\Release\MFormatsControl.baml
+F:\Prabhath\WPF\WPF MControls Library\obj\x64\Release\MPersistControl.baml
+F:\Prabhath\WPF\WPF MControls Library\obj\x64\Release\MPlaylistControl.baml
+F:\Prabhath\WPF\WPF MControls Library\obj\x64\Release\MPreviewControl.baml
+F:\Prabhath\WPF\WPF MControls Library\obj\x64\Release\MPropsControl.baml
+F:\Prabhath\WPF\WPF MControls Library\obj\x64\Release\MRendererList.baml
+F:\Prabhath\WPF\WPF MControls Library\obj\x64\Release\WindowStyle.baml
+F:\Prabhath\WPF\WPF MControls Library\obj\x64\Release\PlaylistBackground.baml
+F:\Prabhath\WPF\WPF MControls Library\obj\x64\Release\FormCommand.g.cs
+F:\Prabhath\WPF\WPF MControls Library\obj\x64\Release\FormFileName.g.cs
+F:\Prabhath\WPF\WPF MControls Library\obj\x64\Release\FormLive.g.cs
+F:\Prabhath\WPF\WPF MControls Library\obj\x64\Release\FormPlaylist.g.cs
+F:\Prabhath\WPF\WPF MControls Library\obj\x64\Release\MFileName.g.cs
+F:\Prabhath\WPF\WPF MControls Library\obj\x64\Release\MFileRateControl.g.cs
+F:\Prabhath\WPF\WPF MControls Library\obj\x64\Release\MFileSeeking.g.cs
+F:\Prabhath\WPF\WPF MControls Library\obj\x64\Release\MFileState.g.cs
+F:\Prabhath\WPF\WPF MControls Library\obj\x64\Release\MFormatsControl.g.cs
+F:\Prabhath\WPF\WPF MControls Library\obj\x64\Release\MLiveControl.g.cs
+F:\Prabhath\WPF\WPF MControls Library\obj\x64\Release\MPersistControl.g.cs
+F:\Prabhath\WPF\WPF MControls Library\obj\x64\Release\MPlaylistControl.g.cs
+F:\Prabhath\WPF\WPF MControls Library\obj\x64\Release\MPreviewControl.g.cs
+F:\Prabhath\WPF\WPF MControls Library\obj\x64\Release\MPropsControl.g.cs
+F:\Prabhath\WPF\WPF MControls Library\obj\x64\Release\MRendererList.g.cs
+F:\Prabhath\WPF\WPF MControls Library\obj\x64\Release\WindowStyle.g.cs
+F:\Prabhath\WPF\WPF MControls Library\obj\x64\Release\PlaylistBackground.g.cs
+F:\Prabhath\WPF\WPF MControls Library\obj\x64\Release\GeneratedInternalTypeHelper.g.cs
+F:\Prabhath\WPF\WPF MControls Library\obj\x64\Release\WPFMControls_MarkupCompile.cache
+F:\Prabhath\WPF\WPF MControls Library\obj\x64\Release\WPFMControls_MarkupCompile.lref
+F:\Prabhath\WPF\WPF MControls Library\obj\x64\Release\FormCommand.baml
+F:\Prabhath\WPF\WPF MControls Library\obj\x64\Release\FormFileName.baml
+F:\Prabhath\WPF\WPF MControls Library\obj\x64\Release\FormLive.baml
+F:\Prabhath\WPF\WPF MControls Library\obj\x64\Release\FormPlaylist.baml
+F:\Prabhath\WPF\WPF MControls Library\obj\x64\Release\MFileName.baml
+F:\Prabhath\WPF\WPF MControls Library\obj\x64\Release\MLiveControl.baml
+F:\Prabhath\WPF\WPF MControls Library\obj\x64\Release\WPFMControls.g.resources
+F:\Prabhath\WPF\WPF MControls Library\obj\x64\Release\WPFMControls.Properties.Resources.resources
+F:\Prabhath\WPF\WPF MControls Library\obj\x64\Release\WPF MControls.csproj.GenerateResource.cache
+F:\Prabhath\WPF\WPF MControls Library\obj\x64\Release\WPFMControls.dll
+F:\Prabhath\WPF\WPF MControls Library\obj\x64\Release\WPF MControls.csprojAssemblyReference.cache
